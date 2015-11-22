@@ -29,8 +29,10 @@ aptitude install openvpn
 ## install filezilla
 aptitude install filezilla
 
+
 # Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dpkg -i google-chrome-stable_current_amd64.deb
 
 
 ## install spotify
@@ -42,5 +44,16 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 apt-get update
 # 4. Install Spotify
 aptitude install spotify-client
+
+
+# Android adb tools
+aptitude install android-tools-adb
+
         
+# install 51-android.rules
+curl --create-dirs -L -o /etc/udev/rules.d/51-android.rules -O -L https://raw.githubusercontent.com/snowdream/51-android/master/51-android.rules
+chmod a+r /etc/udev/rules.d/51-android.rules
+sudo service udev restart
+
+
 
