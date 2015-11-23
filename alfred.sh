@@ -19,8 +19,15 @@ tar -xvzf jdk-8u65-linux-x64.tar.gz
 rm /home/joergi/dev/java/jdk-8u65-linux-x64.tar.gz
 
 # java 6
-#not working
-#wget --no-check-certificate --no-cookies --header "Cookie:  s_nr=1359635827494; s_cc=true; gpw_e24=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjava-archive-downloads-javase6-419409.html;" http://download.oracle.com/otn/java/jdk/6u45-b06/jdk-6u45-linux-x64.bin
+add-apt-repository ppa:webupd8team/java
+apt-get update
+echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
+echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
+aptitude install -y -qq oracle-java6-installer
+
+echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
+echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
+aptitude install -y -qq oracle-java6-set-default
 
 ## openvpn
 aptitude install openvpn
