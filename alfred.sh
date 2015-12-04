@@ -62,5 +62,9 @@ curl --create-dirs -L -o /etc/udev/rules.d/51-android.rules -O -L https://raw.gi
 chmod a+r /etc/udev/rules.d/51-android.rules
 sudo service udev restart
 
-
+# install telegram
+wget https://tdesktop.com/linux 
+mv linux /home/joergi/programs/telegram.tar.xz
+cd /home/joergi/programs/
+tar xf telegram.tar.xz
 
