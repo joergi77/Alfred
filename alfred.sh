@@ -68,3 +68,11 @@ mv linux /home/joergi/programs/telegram.tar.xz
 cd /home/joergi/programs/
 tar xf telegram.tar.xz
 
+#vlc
+sudo aptitude install vlc
+
+# npm  + bower
+sudo aptitude install npm
+npm install -g bower
+
+
