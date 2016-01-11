@@ -75,4 +75,6 @@ sudo aptitude install vlc
 sudo aptitude install npm
 npm install -g bower
 
+#gimp
+sudo aptitude install gimp
 
